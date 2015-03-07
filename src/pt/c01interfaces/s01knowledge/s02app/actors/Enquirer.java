@@ -10,7 +10,8 @@ import pt.c01interfaces.s01knowledge.s01base.inter.IResponder;
 public class Enquirer implements IEnquirer
 {
     IObjetoConhecimento obj;
-	
+	String[] vetorAnimal;
+	int i = 0;
 	public Enquirer()
 	{
 	}
@@ -20,24 +21,30 @@ public class Enquirer implements IEnquirer
 	public void connect(IResponder responder)
 	{
         IBaseConhecimento bc = new BaseConhecimento();
+		vetorAnimal = bc.listaNomes();
+		obj = bc.recuperaObjeto(vetorAnimal[i]);
 		
-		obj = bc.recuperaObjeto("tiranossauro");
-
 		IDeclaracao decl = obj.primeira();
 		
-        boolean animalEsperado = true;
-		while (decl != null && animalEsperado) {
+        //boolean animalEsperado = true;
+		while (decl != null) {
 			String pergunta = decl.getPropriedade();
 			String respostaEsperada = decl.getValor();
 			
 			String resposta = responder.ask(pergunta);
 			if (resposta.equalsIgnoreCase(respostaEsperada))
+			{
 				decl = obj.proxima();
+			}
 			else
-				animalEsperado = false;
+			{
+				i++;
+				obj = bc.recuperaObjeto(vetorAnimal[i]);
+				decl = obj.primeira();
+			}
 		}
 		
-		boolean acertei = responder.finalAnswer("tiranossauro");
+		boolean acertei = responder.finalAnswer(vetorAnimal[i]);
 		
 		if (acertei)
 			System.out.println("Oba! Acertei!");
