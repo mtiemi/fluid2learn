@@ -13,7 +13,7 @@ public class Enquirer implements IEnquirer
 {
     IObjetoConhecimento obj;
 	String[] vetorAnimal; /* vetor que guarda a lista de animais */
-	Map<String,String> perguntaFeita = new HashMap<String,String>(); /* cria um hashtable para armazenar as perguntas e respostas */
+	Map <String,String> perguntaFeita = new HashMap <String,String>(); /* cria um hashtable para armazenar as perguntas e respostas */
 	int i = 0;
 	
 	public Enquirer()
@@ -47,15 +47,14 @@ public class Enquirer implements IEnquirer
 			if (resposta.equalsIgnoreCase(respostaEsperada)) /* compara a resposta dada e a esperada */
 			{
 				decl = obj.proxima();
-			}
-			else /* se nao for a resposta esperada, vai para o proximo animal */
+			}else /* se nao for a resposta esperada, vai para o proximo animal */
 			{
 				i++;
 				obj = bc.recuperaObjeto(vetorAnimal[i]);
 				decl = obj.primeira();
-			}
-		
+			}	
 		}
+		
 		boolean acertei = responder.finalAnswer(vetorAnimal[i]);
 		
 		if (acertei)
