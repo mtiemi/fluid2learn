@@ -12,7 +12,11 @@ import pt.c01interfaces.s01knowledge.s01base.inter.IObjetoConhecimento;
 
 public class BaseConhecimento implements IBaseConhecimento
 {
+<<<<<<< HEAD
 	public static final String DIRETORIO_RELATIVO = "../../s02app/bd",
+=======
+	public static final String DIRETORIO_RAIZ = "bin/pt/c01interfaces/s01knowledge/s02app/bd/",
+>>>>>>> branch 'master' of https://github.com/mtiemi/fluid2learn
 	                           EXTENSAO = ".txt";
 	String diretorio = BaseConhecimento.class.getResource(DIRETORIO_RELATIVO).getPath();
 	

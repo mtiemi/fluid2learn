@@ -20,7 +20,11 @@ public class Statistics implements IStatistics {
 		Iterator<Pergunta>it = perguntas.iterator();
 		while(it.hasNext()) {
 			p = it.next();
+<<<<<<< HEAD
             if (p.getPergunta().equalsIgnoreCase(pergunta)) {
+=======
+			if (p.getPergunta().equalsIgnoreCase(pergunta)) {
+>>>>>>> branch 'master' of https://github.com/mtiemi/fluid2learn
             	naoExiste = false;
             	p.incQuantidadeVezes();
             	break;
