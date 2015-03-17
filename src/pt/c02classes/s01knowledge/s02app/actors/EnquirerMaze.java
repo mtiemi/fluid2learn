@@ -35,7 +35,6 @@ public class EnquirerMaze implements IEnquirer {
 				return true;
 			}	
 		}
-		
 		return false;
 	}
 	
@@ -127,7 +126,6 @@ public class EnquirerMaze implements IEnquirer {
 		}else 
 		{
 			System.out.println("Fuém fuém fuém!");	
-			
 		}
 		return true;
 	}
