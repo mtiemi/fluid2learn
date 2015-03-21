@@ -11,11 +11,11 @@ import java.util.HashMap;
 
 public class EnquirerAnimals implements IEnquirer {
 
-	IResponder responder;
-	IObjetoConhecimento obj;
-	String[] vetorAnimal; /* vetor que guarda a lista de animais */
-	Map <String,String> perguntaFeita = new HashMap <String,String>(); /* cria um hashtable para armazenar as perguntas e respostas */
-	int i = 0;
+	private IResponder responder;
+	private IObjetoConhecimento obj;
+	private String[] vetorAnimal; /* vetor que guarda a lista de animais */
+	private Map <String,String> perguntaFeita = new HashMap <String,String>(); /* cria um hashtable para armazenar as perguntas e respostas */
+	private int i = 0;
 	
 	public void connect(IResponder responder) {
 		this.responder = responder;

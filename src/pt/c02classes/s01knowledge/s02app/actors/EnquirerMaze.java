@@ -8,9 +8,9 @@ import java.util.Stack;
 
 public class EnquirerMaze implements IEnquirer {
 
-	IResponder responder;
-	Stack <String> stackPosition = new Stack <String>(); /* usando pilha para armazenar o caminho feito no labirinto */
-	String[] direction = new String[]{"norte", "leste", "sul", "oeste"};
+	private IResponder responder;
+	private Stack <String> stackPosition = new Stack <String>(); /* usando pilha para armazenar o caminho feito no labirinto */
+	private String[] direction = new String[]{"norte", "leste", "sul", "oeste"};
 
 	public void connect(IResponder responder) {
 		this.responder = responder;
