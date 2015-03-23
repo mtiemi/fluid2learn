@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_tMG6oMzLEeSiDcEPw6gIrQ" visibility="private">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_tMG6oczLEeSiDcEPw6gIrQ">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_OFdWQMzMEeSiDcEPw6gIrQ" name="EnquirerAnimals"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Q4dCUMzMEeSiDcEPw6gIrQ" name="EnquirerMaze"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_S9p0QMzMEeSiDcEPw6gIrQ" name="ResponderAnimals"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WGAFQMzMEeSiDcEPw6gIrQ" name="ResponderMaze" visibility="private">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_wiJAUMzhEeSiDcEPw6gIrQ" name="mazeMatrix" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EChar"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_9wVf8MzhEeSiDcEPw6gIrQ" name="nLinhas" visibility="private">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BFbzgMziEeSiDcEPw6gIrQ" name="nColunas">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EInt"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_ZsLfwMziEeSiDcEPw6gIrQ" name="ResponderMaze ">
+      <ownedParameter xmi:type="uml:Parameter" xmi:id="_iBpV4MziEeSiDcEPw6gIrQ" name="maze">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </ownedOperation>
+  </packagedElement>
+</uml:Model>
